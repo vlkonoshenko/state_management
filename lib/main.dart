@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'flutter_bloc/bloc_screen.dart';
 import 'simple_state_managment/simple_state_screen.dart';
 
 void main() {
@@ -75,7 +76,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   Navigator.of(context).push(MaterialPageRoute(
                       builder: (_) => const SimpleStateScreen()));
                 },
-                child: const Text('Simple state managment'))
+                child: const Text('Simple state managment')),
+            OutlinedButton(
+                onPressed: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (_) => BlocScreen()));
+                },
+                child: const Text('Flutter BLoC'))
           ],
         ),
       ),
