@@ -1,10 +1,12 @@
+import 'package:example/flutter_riverpod/flutter_riverpod_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'flutter_bloc/bloc_screen.dart';
 import 'simple_state_managment/simple_state_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -82,7 +84,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   Navigator.of(context)
                       .push(MaterialPageRoute(builder: (_) => BlocScreen()));
                 },
-                child: const Text('Flutter BLoC'))
+                child: const Text('Flutter BLoC')),
+            OutlinedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (_) => FlutterRiverpodScreen()));
+                },
+                child: const Text('Flutter Riverpod')),
           ],
         ),
       ),
