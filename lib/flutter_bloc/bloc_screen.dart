@@ -10,6 +10,8 @@ import 'bloc/state.dart';
 class BlocScreen extends StatelessWidget {
   final StoreBloc storeBloc = StoreBloc();
 
+  BlocScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +19,7 @@ class BlocScreen extends StatelessWidget {
         title: BlocBuilder<StoreBloc, StoreState>(
           bloc: storeBloc,
           builder: (_, state) {
-            return Text('Backet: ${state.totalPrice}');
+            return Text('Basket: ${state.totalPrice}');
           },
         ),
       ),

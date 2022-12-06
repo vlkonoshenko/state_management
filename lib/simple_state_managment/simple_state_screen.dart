@@ -16,7 +16,7 @@ class _SimpleStateScreenState extends State<SimpleStateScreen> {
   Widget build(BuildContext context) {
     // ignore: prefer_const_constructors
     return Scaffold(
-      appBar: AppBar(title: Text('Backet: ${_storeService.backet.totalPrice}')),
+      appBar: AppBar(title: Text('Backet: ${_storeService.basket.totalPrice}')),
       body: ListView(
         shrinkWrap: true,
         children: products
@@ -24,7 +24,7 @@ class _SimpleStateScreenState extends State<SimpleStateScreen> {
                   title: Text(e.name),
                   onTap: () {
                     setState(() {
-                      _storeService.addProductToBacket(e);
+                      _storeService.addProductTobBasket(e);
                     });
                   },
                 ))

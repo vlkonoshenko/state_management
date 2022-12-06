@@ -15,10 +15,10 @@ class Counter extends StateNotifier<StoreState> {
   Counter() : super(StoreState(0, 0));
 
   void addProduct(Product product) {
-    _storeService.addProductToBacket(product);
+    _storeService.addProductTobBasket(product);
     state = StoreState(
-      _storeService.backet.productList.length,
-      _storeService.backet.totalPrice,
+      _storeService.basket.productList.length,
+      _storeService.basket.totalPrice,
     );
   }
 }

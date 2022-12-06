@@ -1,8 +1,8 @@
 import 'package:example/data/product.dart';
 
-abstract class BacketEvent {}
+abstract class BasketEvent {}
 
-class AddProduct extends BacketEvent {
+class AddProduct extends BasketEvent {
   final Product product;
 
   AddProduct(this.product);

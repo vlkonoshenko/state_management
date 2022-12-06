@@ -1,15 +1,15 @@
-import 'package:example/data/backet.dart';
+import 'package:example/data/basket.dart';
 
 import '../data/product.dart';
 
 class StoreService {
-  final Backet backet = Backet();
+  final Basket basket = Basket();
 
-  void addProductToBacket(Product product) {
-    backet.productList.add(product);
+  void addProductTobBasket(Product product) {
+    basket.productList.add(product);
   }
 
-  void removeProductToBacket(Product product) {
-    backet.productList.remove(product);
+  void removeProductToBasket(Product product) {
+    basket.productList.remove(product);
   }
 }
